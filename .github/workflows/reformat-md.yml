@@ -1,0 +1,29 @@
+name: reformat-md
+run-name: ${{ github.actor }} is reformatting markdown files
+on:
+  push:
+    branches:
+      - main
+jobs:
+  reformat-md:
+    name: Find markdown files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+      - name: Find markdown files
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "arun119019@gmail.com"
+          find ./audioai -type f -name "*.md" -exec python reformat-md.py {} \;
+          if [-z "$(git status --porcelain)"]; then
+            echo "No changes to commit"
+          else
+            git add .
+            git commit -m "Automated reformatting of markdown files"
+            git push
+          fi
