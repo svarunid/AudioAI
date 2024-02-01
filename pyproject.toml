@@ -7,14 +7,15 @@ name = "audio-ai"
 dynamic = ["version"]
 description = "Audio AI: Deep Neural Network Architectures for Text Based Tasks"
 dependencies = [
-    "jax>=0.4.0",
-    "jaxlib>=0.4.0",
-    "flax>=0.7.5",
+    "jax>=0.4.20",
+    "jaxlib>=0.4.20",
+    "flax>=0.8.0",
     "numpy>=1.23.0",
     "optax>=0.1.8",
     "wandb>=0.16.1",
     "orbax>=0.1.9",
-    "clu @ git+https://github.com/google/CommonLoopUtils"
+    "clu @ git+https://github.com/google/CommonLoopUtils",
+    "librosa>=0.10.0",
 ]
 license = { file = "LICENSE" }
 
