@@ -1,7 +1,7 @@
 # Audio AI: Deep Neural Network Architectures for Audio Processing Tasks
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A repository hosting deep neural network architectures trained for audio based tasks. These include wav2vec, ASR, etc. The main purpose of this repository is to serve as a practitioner's guide to building an end-to-end industry grade deep learning model training pipeline.
+A repository hosting deep neural network architectures trained for audio based tasks. These include TTS, ASR, etc. The main purpose of this repository is to serve as a practitioner's guide to building an end-to-end industry grade deep learning model training pipeline.
 
 ## Table of Contents
 1. [Introduction](#introduction)
