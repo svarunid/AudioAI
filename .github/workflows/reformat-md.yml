@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   reformat-md:
-    name: Find markdown files
+    name: Reformat Markdown Files
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
