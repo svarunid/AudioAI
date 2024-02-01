@@ -20,9 +20,7 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "arun119019@gmail.com"
           find ./audioai -type f -name "*.md" -exec python reformat-md.py {} \;
-          if [-z "$(git status --porcelain)"]; then
-            echo "No changes to commit"
-          else
+          if [git status --porcelain]; then
             git add .
             git commit -m "Automated reformatting of markdown files"
             git push
